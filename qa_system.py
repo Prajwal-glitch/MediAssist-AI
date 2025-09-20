@@ -4,7 +4,7 @@ from groq import Groq
 import streamlit as st
 
 class QASystem:
-    def __init__(self, path="chromadb", name="Intermittent_Fasting"):
+    def __init__(self, path="/tmp/chromadb", name="Intermittent_Fasting"):
         self.client = chromadb.PersistentClient(path=path)
         self.col = self.client.get_collection(name=name)
         self.llm = Groq(api_key=st.secrets["GROQ_API_KEY"])
