@@ -1,6 +1,7 @@
 import os
 import chromadb
 from groq import Groq
+import streamlit as st
 
 class QASystem:
     def __init__(self, path="chromadb", name="Intermittent_Fasting"):
