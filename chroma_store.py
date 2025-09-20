@@ -2,6 +2,11 @@
 import chromadb
 from pubmed import PubMedRetriever
 
+__import__("pysqlite3")
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
+
 class ChromaStore:
 
     def __init__(self,path="chromadb",name="Intermittent_Fasting"):
