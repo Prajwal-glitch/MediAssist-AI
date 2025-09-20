@@ -2,6 +2,11 @@ import os
 import chromadb
 from groq import Groq
 
+__import__("pysqlite3")
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
+
 class QASystem:
     def __init__(self, path="chromadb", name="Intermittent_Fasting"):
         self.client = chromadb.PersistentClient(path=path)
