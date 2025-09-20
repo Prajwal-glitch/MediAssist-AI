@@ -2,7 +2,7 @@
 
 A deep learning-powered healthcare application that **provides evidence-based answers on intermittent fasting (IF) for obesity, Type 2 Diabetes, and metabolic disorders**.  
 Built with **RAG (Retrieval-Augmented Generation)**, **ChromaDB**, **LLaMA (Groq API)**, and **Streamlit**.  
-Live Demo – *[Insert your Streamlit app link here]*  
+Live Demo – *https://mediassist-ai-k96i2yae5hg9zmsgmjjkz3.streamlit.app/*  
 
 ---
 
