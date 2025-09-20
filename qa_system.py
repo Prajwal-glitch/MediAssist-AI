@@ -6,7 +6,7 @@ class QASystem:
     def __init__(self, path="chromadb", name="Intermittent_Fasting"):
         self.client = chromadb.PersistentClient(path=path)
         self.col = self.client.get_collection(name=name)
-        self.llm = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+        self.llm = Groq(api_key=st.secrets["api_keys"]["GROQ_API_KEY"])
 
     def query_vectorstore(self, user_query, k=5):
         res = self.col.query(query_texts=[user_query], n_results=k)
